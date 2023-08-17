@@ -1,4 +1,4 @@
-package com.nosort.orbit_design.components
+package com.nosort.orbit_design.foundation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
