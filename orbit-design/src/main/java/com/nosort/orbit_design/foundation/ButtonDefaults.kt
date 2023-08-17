@@ -14,5 +14,6 @@ object ButtonDefaults {
 
     internal val ContentPadding = PaddingValues(horizontalPadding, verticalPadding)
 
-    internal val horizontalArrangement = Arrangement.spacedBy(space = 0.dp, Alignment.CenterHorizontally)
+    internal val horizontalArrangement: Arrangement.Horizontal =
+        Arrangement.spacedBy(space = 8.dp, alignment = Alignment.CenterHorizontally)
 }
