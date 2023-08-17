@@ -10,7 +10,7 @@ object ButtonDefaults {
     internal val minHeight = 32.dp
 
     internal val horizontalPadding = 16.dp
-    internal val verticalPadding = 14.dp
+    internal val verticalPadding = 12.dp
 
     internal val ContentPadding = PaddingValues(horizontalPadding, verticalPadding)
 

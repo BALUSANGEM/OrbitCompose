@@ -13,6 +13,7 @@ class Colors(
 @Stable
 class FeatureColors(
     val normal: Color,
+    val onNormal: Color,
     val subtle: Color,
     val strong: Color
 )
