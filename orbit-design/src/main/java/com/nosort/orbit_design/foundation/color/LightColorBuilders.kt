@@ -19,8 +19,8 @@ fun lightCriticalColors(): FeatureColors = FeatureColors(
     normal = ColorsList.RedNormal,
     //TODO Will be changed below colors as we progress
     onNormal = ColorsList.White,
-    subtle = ColorsList.ProductLight,
-    strong = ColorsList.ProductDark
+    subtle = ColorsList.RedLight,
+    strong = ColorsList.RedDark
 )
 
 fun lightColors() : Colors = Colors(

@@ -13,4 +13,6 @@ object ColorsList {
     public val CloudNormal: Color = Color(0xFFE8EDF1)
 
     public val RedNormal: Color = Color(0xFFD21C1C)
+    public val RedLight: Color = Color(0xFFFAEAEA)
+    public val RedDark: Color = Color(0xFF970C0C)
 }
