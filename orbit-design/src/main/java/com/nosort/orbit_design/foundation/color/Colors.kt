@@ -8,7 +8,8 @@ import androidx.compose.ui.graphics.Color
 @Stable
 class Colors(
     val primary: FeatureColors,
-    val surface: SurfaceColors
+    val surface: SurfaceColors,
+    val content: ContentColors
 )
 
 @Stable
@@ -21,6 +22,11 @@ class FeatureColors(
 
 @Stable
 class SurfaceColors(
+    val normal: Color,
+)
+
+@Stable
+class ContentColors(
     val normal: Color,
 )
 

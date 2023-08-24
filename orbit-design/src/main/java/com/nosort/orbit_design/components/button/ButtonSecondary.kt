@@ -21,7 +21,7 @@ fun ButtonSecondary(
     ) {
         Text(
             string = label,
-            style = OrbitTheme.typography.bodyNormalMedium
+            style = OrbitTheme.typography.bodyNormalMedium.copy(color = OrbitTheme.colors.content.normal)
         )
     }
 }
