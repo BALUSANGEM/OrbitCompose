@@ -64,5 +64,6 @@ fun ButtonPrimaryPreview() {
         ButtonPrimary(onClick = {}, mW, label = "Primary")
         ButtonPrimarySubtle(onClick = {}, mW, label = "Subtle")
         ButtonSecondary(onClick = {}, mW, label = "Secondary")
+        ButtonCritical(onClick = {}, mW, label = "Critical")
     }
 }
