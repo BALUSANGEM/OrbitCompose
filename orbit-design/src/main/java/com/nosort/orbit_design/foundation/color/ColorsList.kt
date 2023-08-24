@@ -7,4 +7,6 @@ object ColorsList {
     internal val ProductLight = Color(0xFFE1F4F3)
     internal val ProductDark = Color(0xFF007A69)
     public val White: Color = Color(0xFFFFFFFF)
+
+    public val CloudNormal: Color = Color(0xFFE8EDF1)
 }

@@ -63,5 +63,6 @@ fun ButtonPrimaryPreview() {
     Column(modifier = mW) {
         ButtonPrimary(onClick = {}, mW, label = "Primary")
         ButtonPrimarySubtle(onClick = {}, mW, label = "Subtle")
+        ButtonSecondary(onClick = {}, mW, label = "Secondary")
     }
 }

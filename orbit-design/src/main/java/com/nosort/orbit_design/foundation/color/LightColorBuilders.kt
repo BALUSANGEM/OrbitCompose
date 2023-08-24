@@ -7,4 +7,8 @@ fun lightPrimaryColors() : FeatureColors = FeatureColors(
     strong = ColorsList.ProductDark
 )
 
-fun lightColors() : Colors = Colors(primary = lightPrimaryColors())
+fun lightSurfaceColors() : SurfaceColors = SurfaceColors(
+    normal = ColorsList.CloudNormal
+)
+
+fun lightColors() : Colors = Colors(primary = lightPrimaryColors(), surface = lightSurfaceColors())
