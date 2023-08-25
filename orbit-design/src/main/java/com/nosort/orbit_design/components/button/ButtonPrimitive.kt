@@ -21,6 +21,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.nosort.orbit_design.OrbitTheme
+import com.nosort.orbit_design.components.Text
 import com.nosort.orbit_design.foundation.ButtonDefaults
 import com.nosort.orbit_design.foundation.ButtonDefaults.ContentPadding
 import com.nosort.orbit_design.foundation.ButtonDefaults.horizontalArrangement
@@ -72,10 +73,20 @@ fun ButtonPrimitive(
 fun ButtonPrimaryPreview() {
     val mW = Modifier.fillMaxWidth();
     Column(modifier = mW) {
-        ButtonPrimary(onClick = {}, mW, label = "Primary")
-        ButtonPrimarySubtle(onClick = {}, mW, label = "Subtle")
-        ButtonSecondary(onClick = {}, mW, label = "Secondary")
-        ButtonCritical(onClick = {}, mW, label = "Critical")
-        ButtonCriticalSubtle(onClick = {}, mW, label = "Critical Subtle")
+        ButtonPrimary(onClick = {}, mW) {
+            Text(string = "Primary")
+        }
+        ButtonPrimarySubtle(onClick = {}, mW) {
+            Text(string = "Subtle")
+        }
+        ButtonSecondary(onClick = {}, mW) {
+            Text(string = "Secondary")
+        }
+        ButtonCritical(onClick = {}, mW) {
+            Text(string = "Critical")
+        }
+        ButtonCriticalSubtle(onClick = {}, mW) {
+            Text(string = "Critical Subtle")
+        }
     }
 }
