@@ -17,11 +17,9 @@ fun ButtonSecondary(
         onClick = onClick,
         modifier = modifier,
         backgroundColor = OrbitTheme.colors.surface.normal,
+        textColor = OrbitTheme.colors.content.normal,
         shape = RoundedCornerShape(6.dp)
     ) {
-        Text(
-            string = label,
-            style = OrbitTheme.typography.bodyNormalMedium.copy(color = OrbitTheme.colors.content.normal)
-        )
+        Text(string = label)
     }
 }

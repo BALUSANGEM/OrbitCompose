@@ -11,16 +11,20 @@ import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
+import com.nosort.orbit_design.OrbitTheme
 import com.nosort.orbit_design.foundation.ButtonDefaults
 import com.nosort.orbit_design.foundation.ButtonDefaults.ContentPadding
 import com.nosort.orbit_design.foundation.ButtonDefaults.horizontalArrangement
+import com.nosort.orbit_design.foundation.LocalTextStyle
 
 @Composable
 fun ButtonPrimitive(
@@ -28,31 +32,38 @@ fun ButtonPrimitive(
     backgroundColor: Color,
     shape: Shape,
     modifier: Modifier = Modifier,
+    textStyle: TextStyle = OrbitTheme.typography.bodyNormalMedium,
+    textColor: Color = Color.Unspecified,
     contentArrangement: Arrangement.Horizontal = horizontalArrangement,
     content: @Composable RowScope.() -> Unit
 ) {
-    Box(
-        modifier = modifier
-            .clip(shape)
-            .background(backgroundColor)
-            .clickable(
-                onClick = onClick,
-                onClickLabel = null,
-                role = Role.Button
-            ),
-        propagateMinConstraints = true,
+    val contentStyle = textStyle.copy(color = textColor)
+    CompositionLocalProvider(
+        LocalTextStyle provides contentStyle
     ) {
-        Row(
-            modifier = Modifier
-                .defaultMinSize(
-                    minWidth = ButtonDefaults.minWidth,
-                    minHeight = ButtonDefaults.minHeight
-                )
-                .padding(ContentPadding),
-            horizontalArrangement = contentArrangement,
-            verticalAlignment = Alignment.CenterVertically,
-            content = content
-        )
+        Box(
+            modifier = modifier
+                .clip(shape)
+                .background(backgroundColor)
+                .clickable(
+                    onClick = onClick,
+                    onClickLabel = null,
+                    role = Role.Button
+                ),
+            propagateMinConstraints = true,
+        ) {
+            Row(
+                modifier = Modifier
+                    .defaultMinSize(
+                        minWidth = ButtonDefaults.minWidth,
+                        minHeight = ButtonDefaults.minHeight
+                    )
+                    .padding(ContentPadding),
+                horizontalArrangement = contentArrangement,
+                verticalAlignment = Alignment.CenterVertically,
+                content = content
+            )
+        }
     }
 }
 

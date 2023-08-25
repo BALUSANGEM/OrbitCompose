@@ -17,11 +17,9 @@ fun ButtonCritical(
         onClick = onClick,
         modifier = modifier,
         backgroundColor = OrbitTheme.colors.critical.normal,
+        textColor = OrbitTheme.colors.critical.onNormal,
         shape = RoundedCornerShape(6.dp)
     ) {
-        Text(
-            string = label,
-            style = OrbitTheme.typography.bodyNormalMedium.copy(color = OrbitTheme.colors.critical.onNormal)
-        )
+        Text(string = label)
     }
 }
