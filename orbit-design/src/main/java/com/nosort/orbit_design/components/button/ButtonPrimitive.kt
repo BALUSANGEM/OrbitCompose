@@ -1,5 +1,6 @@
 package com.nosort.orbit_design.components.button
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -17,10 +18,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.nosort.orbit_design.OrbitTheme
+import com.nosort.orbit_design.R
 import com.nosort.orbit_design.components.Text
 import com.nosort.orbit_design.foundation.ButtonDefaults
 import com.nosort.orbit_design.foundation.ButtonDefaults.ContentPadding
@@ -74,6 +77,10 @@ fun ButtonPrimaryPreview() {
     val mW = Modifier.fillMaxWidth();
     Column(modifier = mW) {
         ButtonPrimary(onClick = {}, mW) {
+            Text(string = "Primary")
+        }
+        ButtonPrimary(onClick = {}, mW) {
+            Image(painter = painterResource(id = com.google.android.material.R.drawable.ic_arrow_back_black_24), contentDescription = "Launcher icon")
             Text(string = "Primary")
         }
         ButtonPrimarySubtle(onClick = {}, mW) {
