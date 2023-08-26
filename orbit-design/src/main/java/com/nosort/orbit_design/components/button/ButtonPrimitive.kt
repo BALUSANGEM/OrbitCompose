@@ -23,7 +23,6 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.nosort.orbit_design.OrbitTheme
-import com.nosort.orbit_design.R
 import com.nosort.orbit_design.components.Text
 import com.nosort.orbit_design.foundation.ButtonDefaults
 import com.nosort.orbit_design.foundation.ButtonDefaults.ContentPadding

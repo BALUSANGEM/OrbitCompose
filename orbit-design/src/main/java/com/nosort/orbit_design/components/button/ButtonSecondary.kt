@@ -6,7 +6,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.nosort.orbit_design.OrbitTheme
-import com.nosort.orbit_design.components.Text
 
 @Composable
 fun ButtonSecondary(
